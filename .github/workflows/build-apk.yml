@@ -27,11 +27,11 @@ jobs:
           gradle-version: 8.7
 
       - name: Debug APK build qilish
-        working-directory: android
+        working-directory: ai-manager/android
         run: gradle assembleDebug --no-daemon
 
       - name: APK'ni saqlash (Artifacts)
         uses: actions/upload-artifact@v4
         with:
           name: ai-manager-debug-apk
-          path: android/app/build/outputs
+          path: ai-manager/android/app/build/outputs/apk/debug/app-debug.apk
